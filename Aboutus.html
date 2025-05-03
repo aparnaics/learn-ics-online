@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            border-radius: 0 0 20px 30px;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #background-video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .div1 {
+            background-color: transparent;
+            color: white;
+            height: 50px;
+            padding: 30px;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+        }
+
+        .div1 h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .div2 {
+            text-align: center;
+            padding: 40px;
+            font-size: 20px;
+            color: white;
+            line-height: 1.8;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .div2 h2 {
+            font-size: 55px;
+            margin-top: 90px;
+            color: white;
+        }
+
+        .div2 p {
+            font-size: 20px;
+        }
+
+        .div3 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .img1, .img2 {
+            width: 45%;
+            height: auto;  
+            max-width: 100%; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .img1 img, .img2 img {
+            width: 100%;
+            height: auto;  
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .img1:hover img, .img2:hover img {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+
+        .div4 {
+            padding: 40px;
+            color: black;
+            line-height: 1.5;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-image: url(C:\Users\ics\Desktop\APARNAPROJECT\IMAGES\images 1.jfif);
+        }
+
+        .div4 p {
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .div4 button {
+            padding: 12px 25px;
+            background-color: #1f4f9c;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .div4 button:hover {
+            background-color: #174d82;
+        }
+
+        
+        @media (max-width: 768px) {
+            .div1 h1 {
+                font-size: 35px;
+            }
+
+            .div2 h2 {
+                font-size: 30px;
+            }
+
+            .div3 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img1, .img2 {
+                width: 80%;  
+                height: auto;  
+            }
+
+            .div4 {
+                padding: 20px;
+            }
+
+            .logo {
+                padding-left: 20px;
+            }
+
+          
+            .div4 button {
+                width: 100%;
+                padding: 15px;
+                font-size: 20px;
+            }
+
+            .div2 p {
+                font-size: 16px;
+            }
+        }
+
+      
+        @media (max-width: 480px) {
+            .div2 {
+                padding: 20px;
+                font-size: 18px;
+            }
+
+            .div2 h2 {
+                font-size: 28px;
+            }
+
+            .div4 {
+                padding: 15px;
+            }
+
+            .div1 {
+                padding: 20px;
+            }
+
+            .div1 h1 {
+                font-size: 30px;
+            }
+
+            .img1, .img2 {
+                width: 90%;  
+                height: auto;  
+            }
+        }
+
+       
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-video">
+        <video autoplay muted loop id="background-video">
+            <source src="aboutusvideo.mp4" type="video/mp4" >
+        </video>
+    </div>
+
+    <div class="div1">
+        <h1 style="padding-top:130px;">About Us</h1>
+    </div>
+    <div class="logo">
+        <a href="index.html">
+            <img src="https://play-lh.googleusercontent.com/xxxWKnRnAKCO7-ktvnWI31gzolp7kYIuIVsZPtjltdwJNuB9UPHssC0BvebGBc2IQts" 
+                style="width:60px;height:60px; margin-right:1900px;margin-top:-70px">
+        </a>
+    </div>
+
+    <div class="div2">
+        <h2>Welcome to ICS</h2>
+        <p><b>ICS Group of Institutions was founded in 2007 to provide comprehensive education and reorganized technological skills to help students achieve their career goals. Our focus is not only on academic excellence but also on the development of soft skills such as communication, interpersonal skills, time management, and leadership. Our institution aims to equip students with the knowledge and practical skills required to succeed in their chosen fields.</b></p>
+    </div>
+
+    <div class="div3">
+        <div class="img1">
+            <img src="laptopab.jpg" alt="Laptop Image" style="height: 400px;">
+        </div>
+        <div class="img2">
+            <img src="group.jpg" alt="ICS Campus Image 2" style="height: 400px;">
+        </div>
+    </div>
+
+    <div class="div4">
+        <p><b>The goal of ICS Group of Institutions is to mold students in the right way so they can build a brighter future. We provide them with all the support they need, guiding them to take responsibility for their academic and career development. Through personalized mentorship, we help students achieve their career goals and ensure they have the foundation to succeed in a rapidly evolving world.</b></p>
+
+        <p><b>ICS takes a holistic approach to education, focusing not just on academic performance but also on nurturing essential life skills like leadership, teamwork, and problem-solving. We aim to instill a sense of ambition and purpose, helping students achieve their career goals—whether that’s landing their dream job or becoming an entrepreneur.</b></p>
+
+        <p><b>Our institution also emphasizes practical exposure, ensuring that students are well-prepared for real-world challenges. Through internships, industry collaborations, and hands-on training, students acquire the skills they need to thrive in their chosen professions. ICS Group of Institutions is a reliable partner in every student's journey towards career success.</b></p>
+
+        <button><a href="contactus.html" style="color: white; text-decoration: none;">Contact Us</a></button>
+    </div>
+</body>
+</html>
