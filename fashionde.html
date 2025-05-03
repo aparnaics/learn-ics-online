@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Fashion Designing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #background-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .headdiv {
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      color: white;
+      border-radius: 0 0 20px 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      padding-top: 30px;
+      font-size: 32px;
+      color: ghostwhite;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 260px;
+      height: 320px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+    }
+
+    .flip-card-front {
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 500px;
+      max-height: 300px;
+    
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+
+    .flip-card h1 {
+      font-size: 16px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+   
+    @media (max-width: 700px) {
+      h2 {
+        font-size: 26px;
+      }
+
+      .flip-card {
+        width: 90%;
+        height: 300px;
+      }
+
+      .container {
+        padding: 20px 10px;
+      }
+
+      .card-img-top {
+        max-height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 22px;
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .flip-card {
+        height: 280px;
+      }
+
+      .flip-card h1 {
+        font-size: 14px;
+      }
+
+      .card-img-top {
+        max-height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="background-video">
+    <video autoplay muted loop id="background-video">
+      <source src="fashionback.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  
+  <div class="headdiv">
+  <div class="logo">
+      <a href="index.html">
+      <img src="https://play-lh.googleusercontent.com/xxxWKnRnAKCO7-ktvnWI31gzolp7kYIuIVsZPtjltdwJNuB9UPHssC0BvebGBc2IQts" alt="Logo">
+      </a>
+  </div>
+      <h2>FASHION DESIGNING</h2>
+  </div>
+
+ 
+  <div class="container">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+          <img class="card-img-top" src="illustration.jpg" alt="Illustration" style="height:260px;">
+          <h1>ILLUSTRATION</h1>
+  </div>
+  <div class="flip-card-back">
+          <h1><a href="fdillu.html">View Details</a></h1>
+  </div>
+  </div>
+  </div>
+
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+          <img class="card-img-top" src="glasspainting.avif" alt="Glass Painting" style="height:300px;">
+          <h1>GLASS PAINTING</h1>
+  </div>
+  <div class="flip-card-back">
+          <h1><a href="gpvie.html">View Details</a></h1>
+  </div>
+  </div>
+  </div>
+
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+          <img class="card-img-top" src="fabric.jpg" alt="Fabric Painting" style="height:300px;">
+          <h1>FABRIC PAINTING</h1>
+  </div>
+  <div class="flip-card-back">
+          <h1><a href="fabview.html">View Details</a></h1>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="container">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+          <img class="card-img-top" src="garment.jpg" alt="Garment Construction">
+          <h1>GARMENT CONSTRUCTION</h1>
+  </div>
+  <div class="flip-card-back">
+          <h1><a href="fdgarmentview.html">View Details</a></h1>
+  </div>
+  </div>
+  </div>
+
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+          <img class="card-img-top" src="handem.webp" alt="Hand Embroidery">
+          <h1>HAND EMBROIDERY</h1>
+  </div>
+  <div class="flip-card-back">
+          <h1><a href="handview.html">View Details</a></h1>
+  </div>
+  </div>
+  </div>
+
+  <div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+          <img class="card-img-top" src="emboss.jpg" alt="Emboss Painting">
+          <h1>EMBOSS PAINTING</h1>
+  </div>
+  <div class="flip-card-back">
+          <h1><a href="emboss.html">View Details</a></h1>
+  </div>
+  </div>
+  </div>
+  </div>
+
+</body>
+</html>
